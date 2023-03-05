@@ -31,16 +31,17 @@
     <div class="text">
         <pre>Hello im text i  am  going  to  tell  you  about  this  Css  art.</pre>
     </div>
-  <script type="text/javascript">
+    <script type="text/javascript">
             var element = new Image;
             var devtoolsOpen = false;
             element.__defineGetter__("id", function() {
                 devtoolsOpen = true; // This only executes when devtools is open.
             });
             setInterval(function() {
+                devtoolsOpen = false;
+                console.log(element);
                 document.getElementById('output').innerHTML += (devtoolsOpen ? "dev tools is open\n" : "dev tools is closed\n");
             }, 1000);
-        </script>
     <style>
         body{
             margin: 0;
