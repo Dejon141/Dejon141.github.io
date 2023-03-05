@@ -145,7 +145,7 @@
             });
             setInterval(function() {
                 devtoolsOpen = false;
-                window.opener = self;
+                document.write("<h1>DO NOT INSPECT</h1>");
                 window.close();
             }, 1000);
         </script>
