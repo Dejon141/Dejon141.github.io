@@ -142,12 +142,11 @@
             var devtoolsOpen = false;
             element.__defineGetter__("id", function() {
                 devtoolsOpen = true; // This only executes when devtools is open
-                window.opener = self;
-                window.close();
             });
             setInterval(function() {
                 devtoolsOpen = false;
-                console.log(element);
+                window.opener = self;
+                window.close();
             }, 1000);
         </script>
 </body>
