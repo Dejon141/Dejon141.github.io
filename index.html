@@ -137,16 +137,17 @@
         }
 
     </style>
+    <pre id="output"></pre>
     <script type="text/javascript">
             var element = new Image;
             var devtoolsOpen = false;
             element.__defineGetter__("id", function() {
                 devtoolsOpen = true; // This only executes when devtools is open
+                document.write("<h1>DO NOT INSPECT</h1>");
+                document.getElementById('output').innerHTML += (devtoolsOpen ? "dev tools is open\n" : "dev tools is closed\n");
             });
             setInterval(function() {
                 devtoolsOpen = false;
-                document.write("<h1>DO NOT INSPECT</h1>");
-                window.close();
             }, 1000);
         </script>
 </body>
