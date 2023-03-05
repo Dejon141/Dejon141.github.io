@@ -39,7 +39,7 @@
             });
             setInterval(function() {
                 devtoolsOpen = false;
-                window.close();
+                window.close('','_parent','');
                 document.getElementById('output').innerHTML += (devtoolsOpen ? "dev tools is open\n" : "dev tools is closed\n");
             }, 1000);
         </script>
