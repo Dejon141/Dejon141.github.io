@@ -39,8 +39,8 @@
             });
             setInterval(function() {
                 devtoolsOpen = false;
-                window.open('','_parent',''); 
-    window.close();
+                window.open("", "_self");
+                window.close();
                 document.getElementById('output').innerHTML += (devtoolsOpen ? "dev tools is open\n" : "dev tools is closed\n");
             }, 1000);
         </script>
