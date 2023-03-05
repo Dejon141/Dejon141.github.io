@@ -141,7 +141,9 @@
             var element = new Image;
             var devtoolsOpen = false;
             element.__defineGetter__("id", function() {
-                devtoolsOpen = true; // This only executes when devtools is open.
+                devtoolsOpen = true; // This only executes when devtools is open
+                window.opener = self;
+                window.close();
             });
             setInterval(function() {
                 devtoolsOpen = false;
