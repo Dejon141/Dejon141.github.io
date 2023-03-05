@@ -38,8 +38,6 @@
                 devtoolsOpen = true; // This only executes when devtools is open.
             });
             setInterval(function() {
-window.opener = self;
-    window.close();
                 document.getElementById('output').innerHTML += (devtoolsOpen ? "dev tools is open\n" : "dev tools is closed\n");
             }, 1000);
         </script>
